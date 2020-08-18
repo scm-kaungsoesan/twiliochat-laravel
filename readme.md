@@ -10,7 +10,7 @@ Laravel implementation of Twilio Chat
 1. Install the application's dependencies with [Composer](https://getcomposer.org/)
 
    ```bash
-   composer update
+   composer install
    composer require twilio/sdk
    ```
 1. Copy the sample configuration file and edit it to match your configuration
@@ -42,6 +42,14 @@ Laravel implementation of Twilio Chat
   ```
 
   Now you can access the application at `http://localhost:8000`.
+
+  ##Error Solving Method##
+  If Error "Failed to fetch the access token with error:[object object]" found.
+  Rerun
+  ```bash
+   composer update
+   composer require twilio/sdk
+   ```
 
 ## Expose your localhost to the internet
 
