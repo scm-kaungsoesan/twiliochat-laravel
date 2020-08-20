@@ -267,3 +267,18 @@ body {
 	}
 }
 
+@media (max-width: 991px) {
+	.own-message .message-info-row div.col-md-4 {
+		text-align: right;
+		width: 100%;
+	}
+
+	.message-info-row div.col-md-8 {
+		width: fit-content;
+		display: inline-block;
+	}
+
+	.message-info-row div.col-md-4 {
+		display: inline-block;
+	}
+}
