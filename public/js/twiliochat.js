@@ -61,8 +61,13 @@ var twiliochat = (function() {
 	//write message with enter key in group (send message)
 	function handleInputTextKeypress(event) {
 		if (event.keyCode === 13) {
-			tc.currentChannel.sendMessage($(this).val());
-			event.preventDefault();
+			if($(this).val().trim() == "") {
+				$(this).focus();
+        		return false;
+			} else {
+				tc.currentChannel.sendMessage($(this).val());
+				event.preventDefault();
+			}
 			$(this).val('');
 		} else {
 			notifyTyping();
@@ -375,6 +380,7 @@ var twiliochat = (function() {
 		$connectPanel.addClass('disconnected').removeClass('connected');
 		$inputText.removeClass('with-shadow');
 		$typingRow.addClass('disconnected').removeClass('connected');
+		tc.messagingClient = undefined;
 	}
 
 	//show channel list with ASC
