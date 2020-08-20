@@ -220,6 +220,7 @@ var twiliochat = (function() {
 
 	tc.loadMessages = function() {
 		tc.currentChannel.getMessages(MESSAGES_HISTORY_LIMIT).then(function (messages) {
+			tc.$messageList.text('');
 			messages.items.forEach(tc.addMessageToList);
 		});
 	};

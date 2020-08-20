@@ -120,6 +120,7 @@ body {
 }
 .own-message {
 	background-color: #DDD3D2;
+	font-size: 14px;
 }
 .message-info-row {
 	padding-top: 0.7vh;
@@ -202,6 +203,9 @@ body {
 #status-span {
 	color: #EE887C;
 }
+#status-span #username-span {
+	color: #f6ecec;
+}
 #leave-span {
 	cursor: pointer;
 	color: #370606;
@@ -232,6 +236,29 @@ body {
 	text-align: center;
 	border-top: 1px solid #BCA1A3;
 	border-bottom: 1px solid #BCA1A3;
+}
+
+/* user own message display design */
+.message-info-row div.col-md-8 {
+	width: auto;
+    padding-right: 6px;
+}
+.message-info-row div.col-md-4 {
+	text-align: left;
+}
+.own-message .message-info-row div.col-md-8 {
+	text-align: right;
+    width: 78%;
+}
+.own-message .message-info-row div.col-md-4 {
+	width: 22%;
+	text-align: center;
+}
+.own-message .message-info-row .message-username {
+	display: none;
+}
+.own-message .message-content-row p.message-body {
+	text-align: right;
 }
 
 @media (min-width: 992px) {
